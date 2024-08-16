@@ -1,0 +1,10 @@
+{
+  "name": "branch_stub",
+  "version": "1.0.0",
+  "devDependencies": {
+    "node-fetch": "2.6.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

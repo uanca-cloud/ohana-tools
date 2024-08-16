@@ -1,0 +1,4 @@
+# see example @ https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners
+#global owners
+*   @blegrosvoalte @ancaungureanu2 @gratian-dicu-hillrom @alinlup @ondrisb2
+

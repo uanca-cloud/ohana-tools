@@ -1,0 +1,7 @@
+{
+  "name": "simple-start-k6",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/k6": "0.41.0"
+  }
+}

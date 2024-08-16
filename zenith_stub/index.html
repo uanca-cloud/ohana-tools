@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zenith OAuth2 Stub</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select {
+            padding: 10px;
+        }
+    </style>
+    <script type="application/javascript">
+        function onSumbit() {
+            var firstName = document.getElementById('first_name').value;
+            var lastName = document.getElementById('last_name').value;
+            var title = document.getElementById('title').value;
+            var role = document.getElementById('role').value;
+            var email = document.getElementById('email').value;
+            var userId = document.getElementById('user_id').value;
+            var environment = document.getElementById('environment').value;
+            var redirectUri = role === 'Ohana Administrator' ? 'https://jwt.ms' : `https://${environment}-eus.vf.hrdev.io/x-callback-url/login`;
+
+            var userForm = document.getElementById('user_form');
+            userForm.action += '?user_id='+ encodeURIComponent(userId) + '&first_name=' + encodeURIComponent(firstName)
+                + '&last_name=' + encodeURIComponent(lastName) + '&title=' + encodeURIComponent(title)
+                + '&role=' + encodeURIComponent(role) + '&email=' + encodeURIComponent(email)
+                + '&redirect_uri=' + encodeURIComponent(redirectUri) + '&response_type=token&client_id=1234567890';
+        }
+    </script>
+</head>
+
+<body>
+<form id="user_form" onsubmit="onSumbit();" action="oauth2/authorize" method="POST" enctype="application/x-www-form-urlencoded">
+    <input placeholder="First Name" type="text" id="first_name" name="first_name" required />
+    <input placeholder="Last Name" type="text" id="last_name" name="last_name" required />
+    <input placeholder="Title" type="text" id="title" name="title" required />
+    <select name="role" id="role" required>
+        <option value="Ohana Administrator">Administrator</option>
+        <option value="Ohana Client">Caregiver</option>
+    </select>
+    <input placeholder="Email Address" type="text" id="email" name="email" required />
+    <input placeholder="User ID" type="text" id="user_id" name="user_id" required />
+    <select name="environment" id="environment" required>
+        <option value="aut">AUT</option>
+        <option value="hfx">Hotfix</option>
+    </select>
+    <input type="submit" value="Login" />
+</form>
+
+</body>
+</html>

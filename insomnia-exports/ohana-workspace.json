@@ -1,0 +1,390 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-07-27T20:06:01.435Z",
+  "__export_source": "insomnia.desktop.app:v2021.4.1",
+  "resources": [
+    {
+      "_id": "req_d0f1645eb383439c829214c80f54f47c",
+      "parentId": "fld_f8d014bed22946a881e185f5049eb4f6",
+      "modified": 1627413925005,
+      "created": 1624405189565,
+      "url": "http://localhost:3033/oauth2/token",
+      "name": "OAuth2 Token Endpoint w/Code",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/x-www-form-urlencoded",
+        "params": [
+          {
+            "name": "client_id",
+            "value": "1234567890",
+            "description": "",
+            "id": "pair_cfc99c19e2354f68be96a52fd94d89fc"
+          },
+          {
+            "name": "grant_type",
+            "value": "authorization_code",
+            "description": "",
+            "id": "pair_02a91b50b94d4693bb05227156eb5a01"
+          },
+          {
+            "name": "client_secret",
+            "value": "dummy",
+            "description": "",
+            "id": "pair_58ee44e30b1642389f1de15383049f83"
+          },
+          {
+            "name": "code",
+            "value": "05eb44bcf07f449fcf196d8e6765b0808e13bcfe",
+            "description": "",
+            "id": "pair_ccfec9862a484660aff58ba0a411aaf9"
+          },
+          {
+            "name": "redirect_uri",
+            "value": "https://jwt.ms",
+            "description": "",
+            "id": "pair_88b6197be9c04ab0aebcfc21b01ca993"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "description": "",
+          "id": "pair_854145f169d44df58ab1bad54af07fdc"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1625947658233,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_f8d014bed22946a881e185f5049eb4f6",
+      "parentId": "wrk_f45aabb915714e609b265a8daa9c154b",
+      "modified": 1627413915491,
+      "created": 1627413915491,
+      "name": "Zenith Stub",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1627413915491,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_f45aabb915714e609b265a8daa9c154b",
+      "parentId": null,
+      "modified": 1623853686558,
+      "created": 1623853686558,
+      "name": "Ohana",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_08bb99662a5e4b57b74125aa092b700c",
+      "parentId": "fld_f8d014bed22946a881e185f5049eb4f6",
+      "modified": 1627413927898,
+      "created": 1624405741290,
+      "url": "http://localhost:3033/oauth2/authorize?client_id=1234567890&grant_type=authorization_code&response_type=code&redirect_uri=https%3A%2F%2Fjwt.ms",
+      "name": "OAuth2 Authorize Endpoint w/Code",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "first_name=Bill&last_name=Nye&title=Scientist&email=thescience%40guy.com&user_id=124234234234234&platform=ios"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "id": "pair_ccf89aa3f4264d37934163ce42500c30"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1625947658183,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_affb071d557f494781e5269a232615c2",
+      "parentId": "fld_f8d014bed22946a881e185f5049eb4f6",
+      "modified": 1627413930189,
+      "created": 1624414119147,
+      "url": "http://localhost:3033/oauth2/authorize?client_id=1234567890&response_type=token&redirect_uri=https%3A%2F%2Fjwt.ms",
+      "name": "OAuth2 Authorize Endpoint Implicit Token",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "first_name=Bill&last_name=Nye&title=Scientist&email=thescience%40guy.com&user_id=124234234234234&platform=ios"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded",
+          "id": "pair_ccf89aa3f4264d37934163ce42500c30"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1625947658133,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e2601ed02f1b4ae2ac8ffec0d0794911",
+      "parentId": "wrk_f45aabb915714e609b265a8daa9c154b",
+      "modified": 1627416194412,
+      "created": 1627408751784,
+      "url": "{{baseUrl}}/graphql",
+      "name": "Create CG Session",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation createCgSession($token: String!, $tenant: ID!, $device: DeviceInfoInput!){\\n  session: caregiverCreateOrRefreshSession(\\n    bearerToken: $token, \\n    tenantId: $tenant, \\n    device: $device\\n  ){\\n    id\\n    user {\\n      id\\n      firstName\\n      lastName\\n      role\\n    }\\n    createdAt\\n    expiresAt\\n  }\\n}\",\"variables\":{\"token\":\"\",\"tenant\":\"002L\",\"device\":{\"appVersion\":\"1.0.0\",\"deviceId\":\"1234567890\",\"deviceModel\":\"Android\",\"osVersion\":\"12\"}},\"operationName\":\"createCgSession\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_3f39685a54094bbabc4075043c695c22"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1623853703229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_661a3e7e830242c1b72f070abc3959fc",
+      "parentId": "wrk_f45aabb915714e609b265a8daa9c154b",
+      "modified": 1627415317286,
+      "created": 1627414639631,
+      "url": "{{baseUrl}}/graphql",
+      "name": "Create Admin Session",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation createAdminSession($token: String!, $tenant: ID!){\\n  session: adminCreateOrRefreshSession(\\n    bearerToken: $token\\n    tenantId: $tenant\\n  ){\\n    id\\n    user {\\n      id\\n      firstName\\n      lastName\\n      role\\n    }\\n    createdAt\\n    expiresAt\\n  }\\n}\",\"variables\":{\"token\":\"\",\"tenant\":\"9f3ba8b6-69a4-eb11-85aa-2818783a9d2b\"},\"operationName\":\"createAdminSession\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_3f39685a54094bbabc4075043c695c22"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1623853703204,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f73f342b6c9e485eb8dcbbec767d6627",
+      "parentId": "wrk_f45aabb915714e609b265a8daa9c154b",
+      "modified": 1627415320460,
+      "created": 1623853703279,
+      "url": "{{baseUrl}}/graphql",
+      "name": "List all locales",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query findLocales {\\n  locales {\\n    id\\n    country\\n    language\\n  }\\n}\",\"operationName\":\"findLocales\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_48b8c858122048b587cb223af7d3db28"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_e2601ed02f1b4ae2ac8ffec0d0794911', 'b64::JC5kYXRhLnNlc3Npb24uaWQ=::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1623853703179,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_cf851ea859404a37b69dfe91b444a420ce65463e",
+      "parentId": "wrk_f45aabb915714e609b265a8daa9c154b",
+      "modified": 1627408918894,
+      "created": 1623853686638,
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "SELECT_ENV"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1623853686638,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_cf851ea859404a37b69dfe91b444a420ce65463e",
+      "parentId": "wrk_f45aabb915714e609b265a8daa9c154b",
+      "modified": 1627408729036,
+      "created": 1623853686646,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_ff21fc60a62248359d6bdcb9eec5690f",
+      "parentId": "wrk_f45aabb915714e609b265a8daa9c154b",
+      "modified": 1623853686571,
+      "created": 1623853686571,
+      "fileName": "Ohana",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_9c2b6bba66cf487e98a0e50b4cb52062",
+      "parentId": "env_cf851ea859404a37b69dfe91b444a420ce65463e",
+      "modified": 1627408960124,
+      "created": 1627408817539,
+      "name": "Development",
+      "data": {
+        "baseUrl": "https://dev-eus.vf.hrdev.io"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_ad09815d654642fe94fac4e5bca40273",
+      "parentId": "env_cf851ea859404a37b69dfe91b444a420ce65463e",
+      "modified": 1627408960123,
+      "created": 1627408839322,
+      "name": "Test",
+      "data": {
+        "baseUrl": "https://test-eus.vf.hrdev.io"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_a95959d283854ba3af9275e0187e56d6",
+      "parentId": "env_cf851ea859404a37b69dfe91b444a420ce65463e",
+      "modified": 1627408960124,
+      "created": 1627408846297,
+      "name": "e2e",
+      "data": {
+        "baseUrl": "https://aut-eus.vf.hrdev.io"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_8d0809c50eaf4c99b77a32d168b792af",
+      "parentId": "env_cf851ea859404a37b69dfe91b444a420ce65463e",
+      "modified": 1627408960124,
+      "created": 1627408854970,
+      "name": "Stage",
+      "data": {
+        "baseUrl": "https://ohana-stage.hrdev.io"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_d23eeb6a06f7404da6f81fba9928541a",
+      "parentId": "env_cf851ea859404a37b69dfe91b444a420ce65463e",
+      "modified": 1627408960124,
+      "created": 1627408860406,
+      "name": "Hotfix",
+      "data": {
+        "baseUrl": "https://hfx-eus.vf.hrdev.io"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1,
+      "_type": "environment"
+    }
+  ]
+}
